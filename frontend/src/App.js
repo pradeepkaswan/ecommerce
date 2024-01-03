@@ -1,8 +1,17 @@
-import React from 'react'
+import { Container } from "react-bootstrap"
+import Header from "./components/sections/header"
+import { Outlet } from "react-router-dom"
 
 const App = () => {
   return (
-    <h1>App</h1>
+    <>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+    </>
   )
 }
 
